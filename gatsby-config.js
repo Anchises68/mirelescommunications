@@ -1,15 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `MirelesCloud Gatsby Starter`,
-    siteUrl: `https://mirelescloud.com`,
-    description: `Blazing fast modern site generator for React`,
+    title: `Mireles Communications`,
+    siteUrl: `https://www.mirelescommunications.com`,
+    description: `Mireles Communications Landing Page`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `MirelesCloud Gatsby Starter`,
+        name: `Mireles Communications`,
         start_url: `/`,
       }
     },
@@ -45,7 +45,9 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-purgecss`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
