@@ -44,18 +44,19 @@ const TemplateWrapper = () => (
     render={data => (
       <>
         <Layout>
-          <section class="hero is-medium is-dark is-bold">
-            <div class="hero-body">
-              <div class="container">
-                <Title class="title">
+          <section className="hero is-medium is-dark is-bold">
+            <div className="hero-body">
+              <div className="container">
+                <Title className="title">
                   Mireles Communications
                 </Title>
-                <SubTitle class="subtitle">
+                <SubTitle className="subtitle">
                   Design - Development - Distribution
                 </SubTitle>
               </div>
             </div>
           </section>
+        
         </Layout>
       </>
     )}
