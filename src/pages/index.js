@@ -12,6 +12,7 @@ const Hero = css`
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+
 `
 
 const SubTitle = styled.h1`
@@ -24,7 +25,6 @@ const Title = styled.h1`
   text-transform: uppercase;
   font-size: 4rem;
   text-align: center;
-
 
   @media (max-width: 600px) {
     font-size: 2.8rem;
@@ -78,7 +78,7 @@ const TemplateWrapper = () => (
         hero: file(relativePath: {eq: "images/Laptop1.jpg"}) {
           childImageSharp {
             fluid(maxWidth: 2048 quality: 100) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
@@ -96,14 +96,34 @@ const TemplateWrapper = () => (
             }
           }
         }
+        golivewell: file(relativePath: {eq: "images/golivewell.png"}) {
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
+        ccc: file(relativePath: {eq: "images/centurycustomcoach.png"}) {
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
+        tyss: file(relativePath: {eq: "images/smokeshop.png"}) {
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
       }
     `}
     render={data => (
       <>
         <Layout>
-          <section className="hero is-large is-dark is-bold" css={Hero} style={{
+          <section className="hero is-large is-bold is-dark" css={Hero} style={{
               backgroundImage: `url(${data.hero.childImageSharp.fluid.src})`
-
             }}>
             <div className="hero-body">
               <div className="container">
@@ -117,10 +137,10 @@ const TemplateWrapper = () => (
             </div>
           </section>
           <Feature className="container is-fluid is-primary">
-            <div className="columns">
-              <div className="column">First Column</div>
-              <div className="column">Second Column</div>
-              <div className="column">Third Column</div>
+            <div className="columns flex">
+              <div className="column"><Img fluid={data.golivewell.childImageSharp.fluid}/></div>
+              <div className="column"><Img fluid={data.ccc.childImageSharp.fluid}/></div>
+              <div className="column"><Img fluid={data.tyss.childImageSharp.fluid}/></div>
             </div>
           </Feature>
           <Main className="container is-fluid">
@@ -131,6 +151,14 @@ const TemplateWrapper = () => (
 
             </div>
           </Main>
+          <footer className="footer">
+            <div className="content has-text-centered">
+              <p>
+                <strong>Mireles Communications</strong> by <a href="https://mirelescloud.com" aria-label="MirelesCloud" style={{color:"#666699"}}>MirelesCloud</a>
+              </p>
+            </div>
+          </footer>
+
         </Layout>
       </>
     )}
