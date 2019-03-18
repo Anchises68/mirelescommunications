@@ -3,8 +3,16 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import styled from "@emotion/styled"
+import { css } from '@emotion/core'
 
 import Layout from "../components/layout"
+
+const Hero = css`
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+`
 
 const SubTitle = styled.h1`
   font-size: 1.5rem;
@@ -16,6 +24,7 @@ const Title = styled.h1`
   text-transform: uppercase;
   font-size: 4rem;
   text-align: center;
+
 
   @media (max-width: 600px) {
     font-size: 2.8rem;
@@ -57,9 +66,6 @@ const Main = styled.div`
     transform: translate3D(0, -2px, 0) scale(1.02);
 `
 const Alex = styled.div`
-  position: top;
-
-
 
 `
 
@@ -69,7 +75,7 @@ const TemplateWrapper = () => (
   <StaticQuery
     query={graphql`
       query HeroQuery {
-        hero: file(relativePath: {eq: "images/julian-bock-250960-unsplash.jpg"}) {
+        hero: file(relativePath: {eq: "images/Laptop1.jpg"}) {
           childImageSharp {
             fluid(maxWidth: 2048 quality: 100) {
               ...GatsbyImageSharpFluid
@@ -95,8 +101,9 @@ const TemplateWrapper = () => (
     render={data => (
       <>
         <Layout>
-          <section className="hero is-medium is-dark is-bold" style={{
+          <section className="hero is-large is-dark is-bold" css={Hero} style={{
               backgroundImage: `url(${data.hero.childImageSharp.fluid.src})`
+
             }}>
             <div className="hero-body">
               <div className="container">
@@ -113,11 +120,13 @@ const TemplateWrapper = () => (
             <div className="columns">
               <div className="column">First Column</div>
               <div className="column">Second Column</div>
+              <div className="column">Third Column</div>
             </div>
           </Feature>
           <Main className="container is-fluid">
             <div className="columns">
-              <Alex className="column"><Img fluid={data.Alex.childImageSharp.fluid}/></Alex>
+              <div className="column">
+                <Alex><Img fluid={data.Alex.childImageSharp.fluid}/></Alex></div>
               <div className="column"><Img fluid={data.Molly.childImageSharp.fluid}/></div>
 
             </div>
