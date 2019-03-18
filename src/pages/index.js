@@ -48,7 +48,6 @@ const Intro = styled.div`
 `
 const Mug = styled.div`
   transition: all 0.5s ease;
-
   :hover {
     box-shadow: rgba(39, 44, 49, 0.06) 8px 28px 50px, rgba(39, 44, 49, 0.06) 1px 6px 12px;
     transition: all 0.4s ease;
@@ -56,23 +55,33 @@ const Mug = styled.div`
 `
 
 const Feature = styled.div`
-  margin: 75px 50px;
-  border-radius: 5px;
-  box-shadow: rgba(39, 44, 49, 0.02) 8px 14px 38px, rgba(39, 44, 49, 0.02) 1px 3px 8px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  box-shadow: rgba(39, 44, 49, 0.03) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+
 `
 const WorkTitle = styled.div`
   text-transform: uppercase;
   margin-left: 50px;
+  padding-top: 25px;
 `
 
 const Work = styled.div`
-  background-color: #fff;
-  margin: 20px;
   transition: all 0.5s ease;
   :hover {
-    box-shadow: rgba(39, 44, 49, 0.06) 8px 28px 50px, rgba(39, 44, 49, 0.06) 1px 6px 12px;
+    opacity: 0.6;
+    box-shadow: rgba(39, 44, 49, 0.01) 8px 28px 50px, rgba(39, 44, 49, 0.01) 1px 6px 12px;
     transition: all 0.4s ease;
-    transform: translate3D(0, -2px, 0) scale(1.02);
+    transform: translate3D(0, -2px, 0) scale(1.01);
+
+`
+
+const Overlay = styled.div`
+  visibility: hidden;
+  :hover {
+    visibility: visible;
+    opacity: 1;
+  }
 `
 
 const TemplateWrapper = () => (
@@ -146,6 +155,7 @@ const TemplateWrapper = () => (
                 <p>We give your business an online voice. </p>
                 <p>As a professional freelance website development and marketing team, we have a combined 37 years experience and expertise in business, marketing and website development.</p>
                 <p>You come to us for expert website design, proven marketing services and competitive rates. You will stay for our second-to-none commitment to you as our client.</p>
+                <a class="button is-primary" href="mailto:mirelescommunications@gmail.com" aria-label="Mireles Communications" >Contact Us</a>
               </div>
             </div>
           </Intro>
@@ -161,7 +171,7 @@ const TemplateWrapper = () => (
                   <div className="card-content">
                     <div className="content">
                       <p className="title is-4">Alex Mireles</p>
-                      <p className="subtitle">Web Developer - Web Designer</p>
+                      <p className="subtitle">Web Developer</p>
                       <span className="icon">
                         <a href="https://mirelescloud.com" aria-label="MirelesCloud" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} className="fas fa-lg "/></a>
                       </span>
@@ -209,17 +219,34 @@ const TemplateWrapper = () => (
               </div>
             </div>
           </div>
-          <div className="container" style={{paddingTop:"75px"}}>
+          <div className="container" style={{paddingTop:"30px"}}>
             <hr/>
           </div>
-          <Feature className="container is-fluid">
+          <Feature className="container">
             <WorkTitle className="title has-text-left has-text-grey">Work Examples</WorkTitle>
-            <div className="columns" style={{margin:"0 20px 50px 20px"}}>
-              <Work className="column "><a href="https://golivewell.com" aria-label="Go Live Well" target="_blank" rel="noopener noreferrer"><Img fluid={data.golivewell.childImageSharp.fluid}/></a></Work>
+            <div className="columns">
+              <Work className="column ">
+                <a href="https://golivewell.com" aria-label="Go Live Well" target="_blank" rel="noopener noreferrer">
+                  <Img fluid={data.golivewell.childImageSharp.fluid} />
+                </a>
+                <Overlay>
+                  <FontAwesomeIcon icon={faLink} className="fa-2x" style={{color:"#000"}}/>
+                </Overlay>
+              </Work>
               <Work className="column "><a href="https://centurycustomcoach.com" aria-label="Century Custom Coach" target="_blank" rel="noopener noreferrer"><Img fluid={data.ccc.childImageSharp.fluid}/></a></Work>
               <Work className="column "><a href="https://theyellowsmokeshop.com" aria-label="The Yellow Smoke Shop" target="_blank" rel="noopener noreferrer"><Img fluid={data.tyss.childImageSharp.fluid}/></a></Work>
             </div>
           </Feature>
+          <div className="container has-background-white" style={{marginTop:"30px", marginBottom:"30px", padding:"10px"}}>
+            <div className="columns">
+              <div className="column is-full has-text-centered">
+
+                <a class="button is-primary is-large" href="mailto:mirelescommunications@gmail.com" aria-label="Mireles Communications" >Contact Us</a>
+
+
+              </div>
+            </div>
+          </div>
           <footer className="footer">
             <div className="content has-text-centered">
               <p>
