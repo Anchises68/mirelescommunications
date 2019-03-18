@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import styled from "@emotion/styled"
 
@@ -55,6 +56,12 @@ const Main = styled.div`
     transition: all 0.4s ease;
     transform: translate3D(0, -2px, 0) scale(1.02);
 `
+const Alex = styled.div`
+  position: top;
+
+
+
+`
 
 
 
@@ -69,9 +76,16 @@ const TemplateWrapper = () => (
             }
           }
         }
-        feature: file(relativePath: {eq: "images/hotblonde.jpg"}) {
+        Molly: file(relativePath: {eq: "images/Molly.jpg"}) {
           childImageSharp {
-            fluid(maxWidth: 300) {
+            fluid(maxWidth: 500) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        Alex: file(relativePath: {eq: "images/Baller.jpg"}) {
+          childImageSharp {
+            fluid(maxWidth: 500) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -90,7 +104,7 @@ const TemplateWrapper = () => (
                   Mireles Communications
                 </Title>
                 <SubTitle className="subtitle">
-                  Design - Development - Distribution
+                  Web Development - Marketing
                 </SubTitle>
               </div>
             </div>
@@ -103,8 +117,9 @@ const TemplateWrapper = () => (
           </Feature>
           <Main className="container is-fluid">
             <div className="columns">
-              <div className="column">First Column</div>
-              <div className="column">Second Column</div>
+              <Alex className="column"><Img fluid={data.Alex.childImageSharp.fluid}/></Alex>
+              <div className="column"><Img fluid={data.Molly.childImageSharp.fluid}/></div>
+
             </div>
           </Main>
         </Layout>
