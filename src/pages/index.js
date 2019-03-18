@@ -37,7 +37,9 @@ const Title = styled.h1`
 const Intro = styled.div`
   text-align: center;
   background-color: #fff;
-  margin: -75px 50px 80px 50px;
+  border-top: #666699 25px solid;
+  margin-top: -75px;
+  margin-bottom: 50px;
   box-shadow: rgba(39, 44, 49, 0.03) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
 
   @media (max-width: 600px) {
@@ -50,7 +52,7 @@ const Mug = styled.div`
   :hover {
     box-shadow: rgba(39, 44, 49, 0.06) 8px 28px 50px, rgba(39, 44, 49, 0.06) 1px 6px 12px;
     transition: all 0.4s ease;
-    transform: translate3D(0, -2px, 0) scale(1.02);
+    transform: translate3D(0, -2px, 0) scale(1.05);
 `
 
 const Feature = styled.div`
@@ -59,8 +61,8 @@ const Feature = styled.div`
   box-shadow: rgba(39, 44, 49, 0.02) 8px 14px 38px, rgba(39, 44, 49, 0.02) 1px 3px 8px;
 `
 const WorkTitle = styled.div`
-  padding-top: 20px;
-  margin-right: 100px;
+  text-transform: uppercase;
+  margin-left: 50px;
 `
 
 const Work = styled.div`
@@ -138,9 +140,9 @@ const TemplateWrapper = () => (
               </div>
             </div>
           </section>
-          <Intro className="container is-fluid">
-            <div className="columns" style={{padding:"20px 30px 20px"}}>
-              <div className="column is-full has-text-justified is-size-5" >
+          <Intro className="container">
+            <div className="columns" style={{padding:"20px 30px 5px"}}>
+              <div className="column is-full has-text-justified is-size-5 has-text-grey-dark" >
                 <p>We give your business an online voice. </p>
                 <p>As a professional freelance website development and marketing team, we have a combined 37 years experience and expertise in business, marketing and website development.</p>
                 <p>You come to us for expert website design, proven marketing services and competitive rates. You will stay for our second-to-none commitment to you as our client.</p>
@@ -161,19 +163,19 @@ const TemplateWrapper = () => (
                       <p className="title is-4">Alex Mireles</p>
                       <p className="subtitle">Web Developer - Web Designer</p>
                       <span className="icon">
-                        <a href="https://mirelescloud.com" aria-label="MirelesCloud" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} className="fas fa-lg has-text-black"/></a>
+                        <a href="https://mirelescloud.com" aria-label="MirelesCloud" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} className="fas fa-lg "/></a>
                       </span>
                       <span className="icon">
-                        <a href="mailto:mirelescloud@gmail.com" aria-label="e-mail"><FontAwesomeIcon icon={faEnvelope} className="fas fa-lg has-text-black"/></a>
+                        <a href="mailto:mirelescloud@gmail.com" aria-label="e-mail"><FontAwesomeIcon icon={faEnvelope} className="fas fa-lg "/></a>
                       </span>
                       <span className="icon">
-                        <a href="https://www.linkedin.com/in/alex-mireles-0a79999a/" aria-label="linkedin" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} className="fas fa-lg has-text-black"/></a>
+                        <a href="https://www.linkedin.com/in/alex-mireles-0a79999a/" aria-label="linkedin" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} className="fas fa-lg "/></a>
                       </span>
                       <span className="icon">
-                        <a href="https://github.com/MirelesCloud" aria-label="Github" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} className="fas fa-lg has-text-black"/></a>
+                        <a href="https://github.com/MirelesCloud" aria-label="Github" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} className="fas fa-lg "/></a>
                       </span>
                       <span className="icon">
-                        <a href="https://twitter.com/AlexMireles310" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} className="fas fa-lg has-text-black"/></a>
+                        <a href="https://twitter.com/AlexMireles310" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} className="fas fa-lg "/></a>
                       </span>
                       <br/>
                     </div>
@@ -192,13 +194,13 @@ const TemplateWrapper = () => (
                       <p className="title is-4">Molly Riter Mireles</p>
                       <p className="subtitle">Marketing Consultant - Content Creator</p>
                         <span className="icon">
-                          <a href="https://mollymireles.com" aria-label="Molly Mireles" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} className="fas fa-lg has-text-black"/></a>
+                          <a href="https://mollymireles.com" aria-label="Molly Mireles" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} className="fas fa-lg "/></a>
                         </span>
                         <span className="icon">
-                          <a href="mailto:mirelescommunications@gmail.com" aria-label="e-mail"><FontAwesomeIcon icon={faEnvelope} className="fas fa-lg has-text-black"/></a>
+                          <a href="mailto:mirelescommunications@gmail.com" aria-label="e-mail"><FontAwesomeIcon icon={faEnvelope} className="fas fa-lg "/></a>
                         </span>
                         <span className="icon">
-                          <a href="https://www.linkedin.com/in/alex-mireles-0a79999a/" aria-label="linkedin" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} className="fas fa-lg has-text-black"/></a>
+                          <a href="https://www.linkedin.com/in/molly-riter-mireles-0a19bb6/" aria-label="linkedin" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} className="fas fa-lg "/></a>
                         </span>
                       <br/>
                     </div>
@@ -207,11 +209,11 @@ const TemplateWrapper = () => (
               </div>
             </div>
           </div>
-          <div className="container" style={{marginTop:"50px"}}>
+          <div className="container" style={{paddingTop:"75px"}}>
             <hr/>
           </div>
           <Feature className="container is-fluid">
-            <WorkTitle className="title has-text-centered">Work Example</WorkTitle>
+            <WorkTitle className="title has-text-left has-text-grey">Work Examples</WorkTitle>
             <div className="columns" style={{margin:"0 20px 50px 20px"}}>
               <Work className="column "><a href="https://golivewell.com" aria-label="Go Live Well" target="_blank" rel="noopener noreferrer"><Img fluid={data.golivewell.childImageSharp.fluid}/></a></Work>
               <Work className="column "><a href="https://centurycustomcoach.com" aria-label="Century Custom Coach" target="_blank" rel="noopener noreferrer"><Img fluid={data.ccc.childImageSharp.fluid}/></a></Work>
@@ -221,7 +223,7 @@ const TemplateWrapper = () => (
           <footer className="footer">
             <div className="content has-text-centered">
               <p>
-                <strong>Mireles Communications</strong> by <a href="https://mirelescloud.com" aria-label="MirelesCloud" style={{color:"#666699"}}>MirelesCloud</a>
+                <strong>Mireles Communications</strong> by <a href="https://mirelescloud.com" aria-label="MirelesCloud" target="_blank" rel="noopener noreferrer" style={{color:"#666699"}}>MirelesCloud</a>
               </p>
             </div>
           </footer>
