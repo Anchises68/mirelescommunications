@@ -46,6 +46,10 @@ const Feature = styled.div`
   }
 
   box-shadow: rgba(39, 44, 49, 0.02) 8px 14px 38px, rgba(39, 44, 49, 0.02) 1px 3px 8px;
+
+
+`
+const Work = styled.div`
   transition: all 0.5s ease;
   :hover {
     box-shadow: rgba(39, 44, 49, 0.06) 8px 28px 50px, rgba(39, 44, 49, 0.06) 1px 6px 12px;
@@ -138,9 +142,9 @@ const TemplateWrapper = () => (
           </section>
           <Feature className="container is-fluid is-primary">
             <div className="columns flex">
-              <div className="column"><Img fluid={data.golivewell.childImageSharp.fluid}/></div>
-              <div className="column"><Img fluid={data.ccc.childImageSharp.fluid}/></div>
-              <div className="column"><Img fluid={data.tyss.childImageSharp.fluid}/></div>
+              <Work className="column"><a href="https://golivewell.com" aria-label="Go Live Well" target="_blank" rel="noopener noreferrer"><Img fluid={data.golivewell.childImageSharp.fluid}/></a></Work>
+              <Work className="column"><a href="https://centurycustomcoach.com" aria-label="Century Custom Coach" target="_blank" rel="noopener noreferrer"><Img fluid={data.ccc.childImageSharp.fluid}/></a></Work>
+              <Work className="column"><a href="https://theyellowsmokeshop.com" aria-label="The Yellow Smoke Shop" target="_blank" rel="noopener noreferrer"><Img fluid={data.tyss.childImageSharp.fluid}/></a></Work>
             </div>
           </Feature>
           <Main className="container is-fluid">
