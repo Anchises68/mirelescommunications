@@ -1,7 +1,8 @@
-# MirelesCloud Gatsby Starter
+# Mireles Communications
 ### Gatsby v2
 
-## Running in development
+## Install and running in development
+`git clone git@github.com:MirelesCloud/mirelescommunications.git`
 `npm install`
 `gatsby develop`
 
@@ -13,6 +14,18 @@
 `gatsby-plugin-google-fonts`
 `gatsby-transformer-sharp`
 `gatsby-plugin-sharp`
+`gatsby-plugin-manifest`
+`gatsby-plugin-purgecss`
+`gatsby-plugin-react-helmet`
+`gatsby-plugin-typography`
+`gatsby-source-filesystem`
+`gatsby-transformer-remark`
+`gatsby-plugin-sass`
 
 ## CSS
-`Bootstrap 4`
+`@emotion/core`
+`@emotion/styled`
+`bulma`
+`node-sass`
+
+##### ...and a few more
