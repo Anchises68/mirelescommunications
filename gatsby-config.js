@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Mireles Communications`,
-    siteUrl: `https://www.mirelescommunications.com`,
+    url: `https://www.mirelescommunications.com`,
     description: `Web Development, Design, Marketing Consultant`,
     image: `/images/Molly.jpg`,
   },

@@ -16,7 +16,6 @@ const Hero = css`
   background-attachment: fixed;
   background-position: bottom;
   background-size: cover;
-
 `
 
 const Title = styled.h1`
@@ -26,11 +25,9 @@ const Title = styled.h1`
   margin: -45px;
   background-postition: center;
 
-
   @media (max-width: 768px) {
     font-size: 2.8rem;
     margin: 0;
-
   }
 `
 
@@ -38,8 +35,6 @@ const SubTitle = styled.h1`
   font-size: 1.5rem;
   text-transform: uppercase;
   text-align: center;
-
-
 `
 
 const Intro = styled.div`

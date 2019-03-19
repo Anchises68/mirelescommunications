@@ -4,6 +4,8 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import "../styles/style.scss"
 
+import SEO from './SEO'
+
 import { TypographyStyle  } from 'react-typography'
 import typography from '../utils/typography'
 
@@ -30,6 +32,7 @@ const Layout = ({children}) => (
 
             <html lang="en" />
           </Helmet>
+          <SEO/>
           <TypographyStyle typography={typography} />
           <div>
             {children}
