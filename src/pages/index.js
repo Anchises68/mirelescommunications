@@ -222,8 +222,9 @@ const TemplateWrapper = () => (
           <div className="container" style={{paddingTop:"30px"}}>
             <hr/>
           </div>
-          <Feature className="container">
+          <Feature className="container has-text-centered">
             <WorkTitle className="title has-text-left has-text-grey">Work Examples</WorkTitle>
+            <hr/>
             <div className="columns">
               <Work className="column ">
                 <a href="https://golivewell.com" aria-label="Go Live Well" target="_blank" rel="noopener noreferrer">
@@ -236,14 +237,12 @@ const TemplateWrapper = () => (
               <Work className="column "><a href="https://centurycustomcoach.com" aria-label="Century Custom Coach" target="_blank" rel="noopener noreferrer"><Img fluid={data.ccc.childImageSharp.fluid}/></a></Work>
               <Work className="column "><a href="https://theyellowsmokeshop.com" aria-label="The Yellow Smoke Shop" target="_blank" rel="noopener noreferrer"><Img fluid={data.tyss.childImageSharp.fluid}/></a></Work>
             </div>
+            <p>More examples <a href="https://mirelescloud.com" aria-label="MirelesCloud" target="_blank" rel="noopener noreferrer">here</a></p>
           </Feature>
           <div className="container has-background-white" style={{marginTop:"30px", marginBottom:"30px", padding:"10px"}}>
             <div className="columns">
               <div className="column is-full has-text-centered">
-
                 <a class="button is-primary is-large" href="mailto:mirelescommunications@gmail.com" aria-label="Mireles Communications" >Contact Us</a>
-
-
               </div>
             </div>
           </div>
