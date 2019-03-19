@@ -29,7 +29,6 @@ const Layout = ({children}) => (
               { name: 'keywords', content: 'sample, something' },
             ]}
           >
-
             <html lang="en" />
           </Helmet>
           <SEO/>

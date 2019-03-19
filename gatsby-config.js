@@ -12,6 +12,8 @@ module.exports = {
       options: {
         name: `Mireles Communications`,
         start_url: `/`,
+        theme_color: `#666699`,
+        background_color: `#efeff5`,
       }
     },
     {
@@ -57,7 +59,7 @@ module.exports = {
           `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
         ]
       }
-    }
-
+    },
+    `gatsby-plugin-offline`
   ]
 }
