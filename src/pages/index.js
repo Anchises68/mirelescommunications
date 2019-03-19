@@ -14,26 +14,34 @@ import Layout from "../components/layout"
 const Hero = css`
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
 
-`
-
-const SubTitle = styled.h1`
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-align: center;
 `
 
 const Title = styled.h1`
   text-transform: uppercase;
   font-size: 4rem;
   text-align: center;
+  margin: -45px;
+  background-postition: center;
 
-  @media (max-width: 600px) {
+
+  @media (max-width: 768px) {
     font-size: 2.8rem;
+    margin: 0;
+
   }
 `
+
+const SubTitle = styled.h1`
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+
+
+`
+
 const Intro = styled.div`
   text-align: center;
   background-color: #fff;
@@ -42,7 +50,7 @@ const Intro = styled.div`
   margin-bottom: 50px;
   box-shadow: rgba(39, 44, 49, 0.03) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     margin-top: 50px;
   }
 `
@@ -56,16 +64,11 @@ const Mug = styled.div`
 
 const Feature = styled.div`
   margin-bottom: 30px;
+  padding-bottom: 5px;
   background-color: #fff;
   box-shadow: rgba(39, 44, 49, 0.03) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
 
 `
-const WorkTitle = styled.div`
-  text-transform: uppercase;
-  margin-left: 50px;
-  padding-top: 25px;
-`
-
 const Work = styled.div`
   transition: all 0.5s ease;
   :hover {
@@ -73,15 +76,17 @@ const Work = styled.div`
     box-shadow: rgba(39, 44, 49, 0.01) 8px 28px 50px, rgba(39, 44, 49, 0.01) 1px 6px 12px;
     transition: all 0.4s ease;
     transform: translate3D(0, -2px, 0) scale(1.01);
-
 `
 
-const Overlay = styled.div`
-  visibility: hidden;
-  :hover {
-    visibility: visible;
-    opacity: 1;
-  }
+const WorkTitle = styled.div`
+  text-transform: uppercase;
+  margin-left: 50px;
+  padding-top: 25px;
+`
+
+const Contact = styled.div`
+  padding: 20px 0 20px;
+  margin-bottom: 30px;
 `
 
 const TemplateWrapper = () => (
@@ -226,26 +231,19 @@ const TemplateWrapper = () => (
             <WorkTitle className="title has-text-left has-text-grey">Work Examples</WorkTitle>
             <hr/>
             <div className="columns">
-              <Work className="column ">
-                <a href="https://golivewell.com" aria-label="Go Live Well" target="_blank" rel="noopener noreferrer">
-                  <Img fluid={data.golivewell.childImageSharp.fluid} />
-                </a>
-                <Overlay>
-                  <FontAwesomeIcon icon={faLink} className="fa-2x" style={{color:"#000"}}/>
-                </Overlay>
-              </Work>
+              <Work className="column "><a href="https://golivewell.com" aria-label="Go Live Well" target="_blank" rel="noopener noreferrer"><Img fluid={data.golivewell.childImageSharp.fluid} /></a></Work>
               <Work className="column "><a href="https://centurycustomcoach.com" aria-label="Century Custom Coach" target="_blank" rel="noopener noreferrer"><Img fluid={data.ccc.childImageSharp.fluid}/></a></Work>
               <Work className="column "><a href="https://theyellowsmokeshop.com" aria-label="The Yellow Smoke Shop" target="_blank" rel="noopener noreferrer"><Img fluid={data.tyss.childImageSharp.fluid}/></a></Work>
             </div>
-            <p>More examples <a href="https://mirelescloud.com" aria-label="MirelesCloud" target="_blank" rel="noopener noreferrer">here</a></p>
+            <p>Find more examples <a href="https://mirelescloud.com" aria-label="MirelesCloud" target="_blank" rel="noopener noreferrer">here</a></p>
           </Feature>
-          <div className="container has-background-white" style={{marginTop:"30px", marginBottom:"30px", padding:"10px"}}>
+          <Contact className="container has-background-white">
             <div className="columns">
               <div className="column is-full has-text-centered">
                 <a class="button is-primary is-large" href="mailto:mirelescommunications@gmail.com" aria-label="Mireles Communications" >Contact Us</a>
               </div>
             </div>
-          </div>
+          </Contact>
           <footer className="footer">
             <div className="content has-text-centered">
               <p>
