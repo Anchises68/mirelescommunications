@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Mireles Communications`,
     siteUrl: `https://www.mirelescommunications.com`,
-    description: `Mireles Communications Landing Page`,
+    description: `Web Development, Design, Marketing Consultant`,
+    image: `/images/Molly.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
