@@ -22,10 +22,12 @@
 `gatsby-transformer-remark`
 `gatsby-plugin-sass`
 
+
 ## CSS
 `@emotion/core`
 `@emotion/styled`
 `bulma`
 `node-sass`
 
-##### ...and a few more
+##### Also
+`SEO`
