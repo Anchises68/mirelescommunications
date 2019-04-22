@@ -143,7 +143,7 @@ const TemplateWrapper = () => (
   <StaticQuery
     query={graphql`
       query HeroQuery {
-        hero: file(relativePath: {eq: "images/banner.jpg"}) {
+        hero: file(relativePath: {eq: "images/eberhard-grossgasteiger-338314-unsplash.jpg"}) {
           childImageSharp {
             fluid(maxWidth: 2048 quality: 100) {
               ...GatsbyImageSharpFluid_tracedSVG
