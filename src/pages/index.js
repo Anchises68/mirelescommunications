@@ -3,7 +3,8 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import styled from "@emotion/styled"
-import { css } from '@emotion/core'
+import { jsx, css } from '@emotion/core'
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faLink } from '@fortawesome/free-solid-svg-icons'
@@ -14,15 +15,67 @@ import Layout from "../components/layout"
 const Hero = css`
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: bottom;
-  background-size: cover;
+  background-position: top;
+  background-size: 100% 75%;
+  margin-bottom: 0;
+  background-color: darken(#252B37, 4%);
+`
+const Content = styled.div`
+  border-style: solid;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-color: #fff;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-width: 1px;
+  max-width: 100%;
+`
+
+const Overlay = css`
+  &:before {
+    content: '';
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+  	opacity: .6;
+  }
+`
+
+const Line = styled.div`
+  border-left: 1px solid white;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+`
+
+const Inner = styled.div`
+@include vendor('transition', (
+        'max-height #{_duration(intro)} ease',
+        'padding #{_duration(intro)} ease',
+        'opacity #{_duration(article)} ease-in-out'
+      ));
+      @include vendor('transition-delay', '0.25s');
+      padding: 3rem 2rem;
+      max-height: 40rem;
+      overflow: hidden;
+
+      > :last-child {
+        margin-bottom: 0;
+      }
 `
 
 const Title = styled.h1`
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
-  margin: -45px;
+
+  color: #fff;
   background-postition: center;
 
   @media (max-width: 768px) {
@@ -32,16 +85,18 @@ const Title = styled.h1`
 `
 
 const SubTitle = styled.h1`
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
   text-align: center;
+
+  color: #fff;
 `
 
 const Intro = styled.div`
   text-align: center;
   background-color: #fff;
   border-top: #666699 25px solid;
-  margin-top: -75px;
+  margin-top: 50px;
   margin-bottom: 50px;
   box-shadow: rgba(39, 44, 49, 0.03) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
 
@@ -88,7 +143,7 @@ const TemplateWrapper = () => (
   <StaticQuery
     query={graphql`
       query HeroQuery {
-        hero: file(relativePath: {eq: "images/Laptop1.jpg"}) {
+        hero: file(relativePath: {eq: "images/banner.jpg"}) {
           childImageSharp {
             fluid(maxWidth: 2048 quality: 100) {
               ...GatsbyImageSharpFluid_tracedSVG
@@ -135,27 +190,78 @@ const TemplateWrapper = () => (
     render={data => (
       <>
         <Layout>
-          <section className="hero is-large is-bold is-dark" css={Hero} style={{
-              backgroundImage: `url(${data.hero.childImageSharp.fluid.src})`
-            }}>
-            <div className="hero-body">
-              <div className="container">
-                <Title className="title">
-                  Mireles Communications
-                </Title>
-                <SubTitle className="subtitle">
-                  Web Development - Marketing
-                </SubTitle>
+        <section className="hero is-fullheight"
+
+        style={{
+          backgroundImage: `url(${data.hero.childImageSharp.fluid.src})`
+        }}
+        css={{
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          position: 'relative',
+
+        }}
+          >
+          <div className="hero-body has-text-justified" >
+            <div className="container">
+              <div className="column is-half is-offset-3">
+
+                <Content>
+                  <Title className="has-text-weight-light">Mireles Communications</Title>
+                  <SubTitle className="has-text-weight-semi-bold"> RELEASE FOR FREE UNDER THE CREATIVE COMMONS LICENSE.</SubTitle>
+
+                </Content>
+
+
               </div>
+
+
+
+
+
+              <div className="container has-text-centered" >
+
+
+                <div class="tabs is-toggle is-centered" style={{marginRight:"auto", marginLeft:"auto"}}>
+                  <ul>
+                    <li>
+                      <a>
+                        <span>Intro</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                      <span>Work</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span>About</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span>Documents</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
-          </section>
+
+          </div>
+        </section>
+
+
           <Intro className="container">
             <div className="columns" style={{padding:"20px 30px 5px"}}>
               <div className="column is-full has-text-justified is-size-5 has-text-grey-dark" >
                 <p>We give your business an online voice. </p>
                 <p>As a professional freelance website development and marketing team, we have a combined 37 years experience and expertise in business, marketing and website development.</p>
                 <p>You come to us for expert website design, proven marketing services and competitive rates. You will stay for our second-to-none commitment to you as our client.</p>
-                <a class="button is-primary" href="mailto:mirelescommunications@gmail.com" aria-label="Mireles Communications" >Contact Us</a>
+                <a className=" button is-primary" href="mailto:mirelescommunications@gmail.com" aria-label="Mireles Communications" >Contact Us</a>
               </div>
             </div>
           </Intro>
@@ -235,7 +341,7 @@ const TemplateWrapper = () => (
           <Contact className="container has-background-white">
             <div className="columns">
               <div className="column is-full has-text-centered">
-                <a class="button is-primary is-large" href="mailto:mirelescommunications@gmail.com" aria-label="Mireles Communications" >Contact Us</a>
+                <a className="button is-primary is-large" href="mailto:mirelescommunications@gmail.com" aria-label="Mireles Communications" >Contact Us</a>
               </div>
             </div>
           </Contact>
