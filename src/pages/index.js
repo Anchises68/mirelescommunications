@@ -223,26 +223,26 @@ const TemplateWrapper = () => (
               <div className="container has-text-centered" >
 
 
-                <div class="tabs is-toggle is-centered" style={{marginRight:"auto", marginLeft:"auto"}}>
-                  <ul>
+                <div class="tabs is-toggle is-centered " style={{marginRight:"auto", marginLeft:"auto"}}>
+                  <ul >
                     <li>
                       <a>
-                        <span>Intro</span>
+                        <span className="has-text-white">Intro</span>
                       </a>
                     </li>
                     <li>
                       <a>
-                      <span>Work</span>
+                      <span className="has-text-white">Work</span>
                       </a>
                     </li>
                     <li>
                       <a>
-                        <span>About</span>
+                        <span className="has-text-white">About</span>
                       </a>
                     </li>
                     <li>
                       <a>
-                        <span>Documents</span>
+                        <span className="has-text-white">Contact</span>
                       </a>
                     </li>
                   </ul>
