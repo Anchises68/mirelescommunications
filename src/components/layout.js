@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import "../styles/style.scss"
+import "../styles/backlight.css"
 
 import SEO from './SEO'
 

@@ -1,15 +1,3 @@
-
-
-
-.main-container {
-    background-color: #fff;
-    width: 80%;
-    position: absolute;
-    top: 50%;
-    margin-left: 7%;
-    border-radius: 5px
-}
-
 @media screen and (max-width: 1199px) {
   #hours {
     display: none;
