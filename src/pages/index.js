@@ -42,7 +42,7 @@ const SubTitle = styled.h1`
   color: #fff;
 `
 
-const TemplateWrapper = () => (
+const Home = () => (
   <StaticQuery
     query={graphql`
       query HeroQuery {
@@ -80,7 +80,7 @@ const TemplateWrapper = () => (
                   <SubTitle className="has-text-weight-semi-bold"> RELEASE FOR FREE UNDER THE CREATIVE COMMONS LICENSE.</SubTitle>
                 </Content>
               </div>
-              
+
                 <Tabs/>
 
 
@@ -93,4 +93,4 @@ const TemplateWrapper = () => (
   />
 )
 
-export default TemplateWrapper
+export default Home

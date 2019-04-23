@@ -21,12 +21,12 @@ const Tabs = () => (
           </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link to="/about">
             <span>About</span>
           </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link to="/contact">
             <span>Contact</span>
           </Link>
         </li>

@@ -7,9 +7,6 @@ import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-ic
 
 const Parking = () => (
   <div>
-
-
-              <Intro className="container">
                 <div className="columns" style={{padding:"20px 30px 5px"}}>
                   <div className="column is-full has-text-justified is-size-5 has-text-grey-dark" >
                     <p>We give your business an online voice. </p>
