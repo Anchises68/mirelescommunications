@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Tabs from "../components/tabs"
 
-export default function AboutTemplate({
+export default function ContactTemplate({
   data,
 }) {
   const { markdownRemark } = data
@@ -34,7 +34,7 @@ export default function AboutTemplate({
   )
 }
 
-export const aboutQuery = graphql`
+export const contactQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
