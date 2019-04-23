@@ -17,6 +17,14 @@ module.exports = {
       }
     },
     {
+    resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages/`,
+        name: "markdown-pages",
+      },
+    },
+    `gatsby-transformer-remark`,
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
@@ -51,6 +59,7 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-purgecss`,
+
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
