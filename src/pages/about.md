@@ -1,7 +1,7 @@
 ---
-path: "/intro"
+path: "/about"
 date: "2017-11-07"
-title: "Welcome"
+title: "About Us"
 ---
 
 This is where some introduction goes
