@@ -1,28 +1,34 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 const Tabs = () => (
   <div className="container has-text-centered" >
-    <div class="tabs is-toggle is-centered" style={{marginRight:"auto", marginLeft:"auto"}}>
+    <div class="tabs is-toggle is-centered" >
       <ul>
         <li>
-          <a href="/intro">
+          <Link to="/">
+            <span>Home</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/intro">
             <span>Intro</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/">
-          <span>Work</span>
-          </a>
+          <Link to="/projects">
+          <span>Projects</span>
+          </Link>
         </li>
         <li>
-          <a href="/">
+          <Link to="/">
             <span>About</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/">
-            <span>Documents</span>
-          </a>
+          <Link to="/">
+            <span>Contact</span>
+          </Link>
         </li>
       </ul>
     </div>
