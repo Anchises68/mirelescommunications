@@ -1,43 +1,8 @@
 import React from "react"
-import { StaticQuery, graphql } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 
-import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import Tabs from "../components/tabs"
 
-const Content = styled.div`
-  border-style: solid;
-  margin-bottom: 40px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border-color: #fff;
-  border-left-style: hidden;
-  border-right-style: hidden;
-  border-width: 1px;
-  max-width: 100%;
-`
-
-const Title = styled.h1`
-  text-transform: uppercase;
-  font-size: 3rem;
-  text-align: center;
-
-  color: #fff;
-  background-postition: center;
-
-  @media (max-width: 768px) {
-    font-size: 2.8rem;
-    margin: 0;
-  }
-`
-
-const SubTitle = styled.h1`
-  font-size: 1rem;
-  text-transform: uppercase;
-  text-align: center;
-
-  color: #fff;
-`
 
 const Home = () => (
   <StaticQuery
@@ -55,9 +20,7 @@ const Home = () => (
     render={data => (
       <>
         <Layout>
-        <section className="hero is-fullheight"
-
-        style={{
+        <section className="hero is-fullheight" style={{
           backgroundImage: `url(${data.hero.childImageSharp.fluid.src})`
 
         }}
@@ -69,11 +32,25 @@ const Home = () => (
 
         }}
           >
+          <div className="hero-head">
+            <nav className="navbar" role="navigation" aria-label="main navigation">
+              <div className="container">
+                <div className="navbar-menu ">
+
+                  <Link className="navbar-item has-text-light" to="/">Home</Link>
+                  <Link className="navbar-item has-text-light" to="/intro">Intro</Link>
+                  <Link className="navbar-item has-text-light" to="/projects">Projects</Link>
+                  <Link className="navbar-item has-text-light" to="/about">About</Link>
+                  <Link className="navbar-item has-text-light" to="/contact">Contact</Link>
+                </div>
+              </div>
+            </nav>
+          </div>
+
           <div className="hero-body has-text-centered" >
             <div className="container">
-              <h1 className="title has-text-light has-text-weight-light">Mireles Commmunications</h1>
-              <h3 classname="subtitle has-text-white has-text-weight-light">RELEASE FOR FREE UNDER THE CREATIVE COMMONS LICENSE</h3>
-              <Tabs/>
+              <h1 className="title has-text-light has-text-weight-light is-size-1">Mireles Commmunications</h1>
+              <h3 className="subtitle has-text-light has-text-weight-light">RELEASE FOR FREE UNDER THE CREATIVE COMMONS LICENSE</h3>
             </div>
           </div>
         </section>

@@ -1,11 +1,5 @@
 import React from 'react'
 import { Link, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
-
-import styled from "@emotion/styled"
-
-import Tabs from './tabs'
-import Social from './social'
 
 const TemplateWrapper = ( {children} ) => (
   <StaticQuery
