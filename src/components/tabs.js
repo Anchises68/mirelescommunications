@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const Tabs = () => (
-  <div className="container has-text-centered" >
-    <div class="tabs is-toggle is-centered" >
+  <div className="" >
+    <div class="tabs has-text-weight-light" >
       <ul>
         <li>
           <Link to="/">

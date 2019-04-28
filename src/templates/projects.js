@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-
 import TemplateWrapper from "../components/wrapper"
 
 export default function ProjectsTemplate({

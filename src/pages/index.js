@@ -2,17 +2,14 @@ import React from "react"
 import { StaticQuery, graphql } from 'gatsby'
 
 import styled from "@emotion/styled"
-
-
-
 import Layout from "../components/layout"
 import Tabs from "../components/tabs"
 
 const Content = styled.div`
   border-style: solid;
-  margin-bottom: 100px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  margin-bottom: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   border-color: #fff;
   border-left-style: hidden;
   border-right-style: hidden;
@@ -62,28 +59,21 @@ const Home = () => (
 
         style={{
           backgroundImage: `url(${data.hero.childImageSharp.fluid.src})`
+
         }}
         css={{
-          backgroundPosition: 'center',
+          backgroundPosition: 'bottom',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           position: 'relative',
 
         }}
           >
-          <div className="hero-body has-text-justified" >
+          <div className="hero-body has-text-centered" >
             <div className="container">
-              <div className="column is-half is-offset-3">
-
-                <Content>
-                  <Title className="has-text-weight-light">Mireles Communications</Title>
-                  <SubTitle className="has-text-weight-semi-bold"> RELEASE FOR FREE UNDER THE CREATIVE COMMONS LICENSE.</SubTitle>
-                </Content>
-              </div>
-
-                <Tabs/>
-
-
+              <h1 className="title has-text-light has-text-weight-light">Mireles Commmunications</h1>
+              <h3 classname="subtitle has-text-white has-text-weight-light">RELEASE FOR FREE UNDER THE CREATIVE COMMONS LICENSE</h3>
+              <Tabs/>
             </div>
           </div>
         </section>
