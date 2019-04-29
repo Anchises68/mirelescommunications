@@ -1,5 +1,8 @@
 import React from 'react'
-import { Link, StaticQuery } from 'gatsby'
+import { StaticQuery } from 'gatsby'
+
+import Social from './social'
+import Tabs from './tabs'
 
 const TemplateWrapper = ( {children} ) => (
   <StaticQuery
@@ -38,43 +41,21 @@ const TemplateWrapper = ( {children} ) => (
             </div>
           </div>
           </div>
-          <div className="section is-centered" style={{margin:"2rem"}}>
-            <div className="container">
+          <div className="section" style={{margin:"2rem"}}>
+            <div className="container ">
               <div className="content">
-                <div class="tabs has-text-weight-light" >
-                  <ul className="has-text-grey">
-                    <li>
-                      <Link to="/">
-                        <span className="has-text-grey">Home</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/intro">
-                        <span className="has-text-grey">Intro</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/projects">
-                      <span className="has-text-grey">Projects</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/about">
-                        <span className="has-text-grey">About</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/contact">
-                        <span className="has-text-grey">Contact</span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+                <Tabs/>
               </div>
             </div>
             <div className="container">
-              <div className="content">
+              <div className="content has-text-weight-light">
                 { children }
+
+              </div>
+              <br/>
+              <br/>
+              <div className="content has-text-centered ">
+                <Social/>
               </div>
             </div>
           </div>

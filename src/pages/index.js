@@ -35,6 +35,13 @@ const Home = () => (
           <div className="hero-head">
             <nav className="navbar" role="navigation" aria-label="main navigation">
               <div className="container">
+                <div className="navbar-brand">
+                  <span className="navbar-burger burger has-text-light" data-target="navbarMenuHeroA">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                </div>
                 <div className="navbar-menu ">
 
                   <Link className="navbar-item has-text-light" to="/">Home</Link>

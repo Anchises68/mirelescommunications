@@ -3,31 +3,31 @@ import { Link } from 'gatsby'
 
 const Tabs = () => (
   <div className="" >
-    <div class="tabs has-text-weight-light" >
-      <ul>
+    <div className="tabs has-text-weight-light" >
+      <ul className="has-text-grey">
         <li>
           <Link to="/">
-            <span>Home</span>
+            <span >Home</span>
           </Link>
         </li>
         <li>
           <Link to="/intro">
-            <span>Intro</span>
+            <span >Intro</span>
           </Link>
         </li>
         <li>
           <Link to="/projects">
-          <span>Projects</span>
+          <span >Projects</span>
           </Link>
         </li>
         <li>
           <Link to="/about">
-            <span>About</span>
+            <span >About</span>
           </Link>
         </li>
         <li>
           <Link to="/contact">
-            <span>Contact</span>
+            <span >Contact</span>
           </Link>
         </li>
       </ul>

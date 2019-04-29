@@ -10,9 +10,41 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
+      intro: allMarkdownRemark(
+        filter: {fileAbsolutePath: { glob: "**/src/pages/intro/*md"}}
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+      projects: allMarkdownRemark(
+        filter: {fileAbsolutePath: { glob: "**/src/pages/projects/*md"}}
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+      about: allMarkdownRemark(
+        filter: {fileAbsolutePath: { glob: "**/src/pages/about/*md"}}
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+      contact: allMarkdownRemark(
+        filter: {fileAbsolutePath: { glob: "**/src/pages/contact/*md"}}
       ) {
         edges {
           node {
@@ -28,7 +60,7 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.intro.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: introPageTemplate,
@@ -36,7 +68,7 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.projects.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: projectsPageTemplate,
@@ -44,7 +76,7 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.about.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: aboutPageTemplate,
@@ -52,7 +84,7 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.contact.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: contactPageTemplate,
