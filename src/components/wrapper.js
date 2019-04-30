@@ -15,13 +15,6 @@ const TemplateWrapper = ( {children} ) => (
             }
           }
         }
-        feature: file(relativePath: {eq: "images/nathan-anderson-100058-unsplash.jpg"}) {
-          childImageSharp {
-            fluid(maxWidth: 2048 quality: 100) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
-          }
-        }
       }
     `}
     render={data => (
