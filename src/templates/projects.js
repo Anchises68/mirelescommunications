@@ -17,6 +17,7 @@ const ImageWrapper = styled.div`
   backface-visibility: hidden;
   -webkit-filter: brightness(100%);
   border-radius: 5px;
+  -webkit-filter: brightness(60%);
   }
 `
 const View = styled.p`
@@ -46,7 +47,6 @@ const Overlay = styled.div`
 
 const Container = styled.div`
   position: relative;
-
   &:hover {
     ${ImageWrapper} {
       opacity: 0.6;

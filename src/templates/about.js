@@ -9,7 +9,7 @@ export default function AboutTemplate({
 }) {
   const { markdownRemark } = data
   const { frontmatter } = markdownRemark
-  console.log(data)
+
   return (
     <TemplateWrapper>
       <div className="jumbotron" style={{marginTop:"50px"}}>
@@ -39,7 +39,7 @@ export default function AboutTemplate({
                  </div>
                  <div className="card-footer">
                    <div className="card-footer-item">
-                     <Social/>
+                     <Social social={data.markdownRemark.frontmatter.alex.email}/>
                    </div>
                  </div>
                </div>
@@ -61,7 +61,7 @@ export default function AboutTemplate({
                  </div>
                  <div className="card-footer">
                    <div className="card-footer-item">
-                     <Social/>
+                     <Social />
                    </div>
                  </div>
                </div>
@@ -79,12 +79,14 @@ export const aboutQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         path
         title
         molly {
           name
           title
+          url
+          linkedin
+          email
           image {
             childImageSharp {
               fluid(maxWidth: 600) {
@@ -96,6 +98,11 @@ export const aboutQuery = graphql`
         alex {
           name
           title
+          url
+          git
+          linkedin
+          email
+          twitter
           image {
             childImageSharp {
               fluid(maxWidth: 600) {
