@@ -8,7 +8,7 @@ const TemplateWrapper = ( {children} ) => (
   <StaticQuery
     query={graphql`
       query PageQuery {
-        image: file(relativePath: {eq: "images/eberhard-grossgasteiger-338314-unsplash.jpg"}) {
+        image: file(relativePath: {eq: "images/aleks-dahlberg-255027-unsplash.jpg"}) {
           childImageSharp {
             fluid(maxWidth: 2048 quality: 100) {
               ...GatsbyImageSharpFluid_tracedSVG

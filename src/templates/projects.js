@@ -8,7 +8,7 @@ import TemplateWrapper from "../components/wrapper"
 
 const ImageWrapper = styled.div`
   position: "absolute"
-  width: 500px;
+  width: 300px;
   height: auto;
   zIndex: 2;
   transition: .5s ease;
@@ -46,6 +46,7 @@ const Overlay = styled.div`
 
 const Container = styled.div`
   position: relative;
+
   &:hover {
     ${ImageWrapper} {
       opacity: 0.6;

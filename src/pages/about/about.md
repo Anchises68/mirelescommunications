@@ -1,7 +1,14 @@
 ---
 path: "/about"
-date: "2017-11-07"
-title: "About Us"
+title: "Who we are"
+molly:
+  image: "../../images/Molly.jpg"
+  name: "Molly Riter Mireles"
+  title: "Marketing Consultant - Content Creator"
+alex:
+  image: "../../images/Baller.jpg"
+  name: "Alex Mireles"
+  title: "Web Developer - Software Engineer"
 ---
 
-This is where some introduction goes
+Nice to meet you

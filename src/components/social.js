@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faLink } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Icon = styled.li`
@@ -12,7 +12,7 @@ const Social = () => (
   <nav className="content">
     <ul>
       <Icon className="icon">
-        <a href="https://mirelescloud.com" aria-label="MirelesCloud" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} className="fas fa-lg has-text-grey-dark "/></a>
+        <a href="https://mirelescloud.com" aria-label="MirelesCloud" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faExternalLinkAlt} className="fas fa-lg has-text-grey-dark "/></a>
       </Icon>
       <Icon className="icon">
         <a href="mailto:mirelescloud@gmail.com" aria-label="e-mail"><FontAwesomeIcon icon={faEnvelope} className="fas fa-lg has-text-grey-dark"/></a>

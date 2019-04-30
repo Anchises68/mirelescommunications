@@ -1,10 +1,9 @@
 ---
 path: "/intro"
-date: "2017-11-07"
-title: "Hi"
+title: "Welcome"
 ---
 
-#### We give your business an online voice.  
+### We give your business an online voice.  
 
 As a professional freelance website development and marketing team, we have a combined 37 years experience and expertise in business, marketing and website development.  
 

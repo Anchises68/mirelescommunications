@@ -11,11 +11,11 @@ export default function IntroTemplate({
   console.log(data)
   return (
     <TemplateWrapper>
-      <div className="jumbotron" style={{marginTop:"50px"}}>
+      <div className="jumbotron" style={{marginTop:"30px"}}>
         <div className="container">
-          <h1 className="title">{frontmatter.title}</h1>
+          <h1 className="title is-uppercase has-text-weight-light">{frontmatter.title}</h1>
             <div
-              className="blog-post-content"
+              className="blog-post-content has-text-weight-light"
               dangerouslySetInnerHTML={{ __html: html }}
             />
         </div>

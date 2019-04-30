@@ -1,6 +1,5 @@
 ---
 path: "/projects"
-date: "2017-11-07"
 title: "Projects"
 projects:
   example1:
