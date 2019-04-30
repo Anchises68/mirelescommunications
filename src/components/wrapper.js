@@ -26,7 +26,6 @@ const TemplateWrapper = ( {children} ) => (
             backgroungRepeat: 'no-repeat',
             backgroundSize: 'cover',
             position: 'relative'
-
           }}>
           <div className="hero-body">
             <div className="container">
@@ -34,7 +33,7 @@ const TemplateWrapper = ( {children} ) => (
             </div>
           </div>
           </div>
-          <div className="section" style={{margin:"2rem"}}>
+          <div className="section">
             <div className="container ">
               <div className="content">
                 <Tabs/>
@@ -43,10 +42,7 @@ const TemplateWrapper = ( {children} ) => (
             <div className="container">
               <div className="content has-text-weight-light">
                 { children }
-
               </div>
-              <br/>
-              <br/>
               <div className="content has-text-centered ">
                 <Social/>
               </div>

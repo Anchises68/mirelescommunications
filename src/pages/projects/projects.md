@@ -13,8 +13,21 @@ projects:
     image: ../../images/golivewell.png
   example3:
     title: "The Yellow Smoke Shop"
-    url: https://wwww.theyellowsmokeshop.com"
+    url: https://wwww.theyellowsmokeshop.com
     image: "../../images/smokeshop.png"
+  example4:
+    title: "White Raven"
+    url: https://flamboyant-shirley-46de22.netlify.com/
+    image: "../../images/whiteraven.jpg"
+  example5:
+    title: "MirelesCloud"
+    url: https://mirelescloud.com/
+    image: "../../images/mirelescloud.jpg"
+  example6:
+    title: "Gem State Class of '68"
+    url: https://gemstateclassof68.com/
+    image: "../../images/gemstate.jpg"
+
 ---
 
-This is where some introduction goes
+A selection of our work.

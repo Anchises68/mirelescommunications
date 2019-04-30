@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
 import TemplateWrapper from "../components/wrapper"
 
@@ -45,7 +46,6 @@ const Overlay = styled.div`
 
 const Container = styled.div`
   position: relative;
-
   &:hover {
     ${ImageWrapper} {
       opacity: 0.6;
@@ -63,11 +63,13 @@ const Container = styled.div`
     }
     ${Overlay} {
       opacity: 1;
-
     }
   }
 `
 
+const round = css`
+  border-radius: 8px;
+`
 export default function ProjectsTemplate({
   data,
 }) {
@@ -76,41 +78,98 @@ export default function ProjectsTemplate({
   console.log(data)
   return (
     <TemplateWrapper>
-      <div className="section" style={{marginTop:"50px"}}>
+      <div className="section">
         <div className="container">
-          <h1 className="title">{frontmatter.title}</h1>
+          <h1 className="title is-uppercase has-text-weight-light">{frontmatter.title}</h1>
             <div
               className="blog-post-content"
               dangerouslySetInnerHTML={{ __html: html }}
             />
+          <br/>
           <div className="columns">
             <div className="column is-one-third">
               <Container>
-                <ImageWrapper className="image imghvr-fade">
-                  <Img fluid={frontmatter.projects.example1.image.childImageSharp.fluid}/>
+                <ImageWrapper className="image" >
+                  <Img fluid={frontmatter.projects.example1.image.childImageSharp.fluid} css={round}/>
                 </ImageWrapper>
                 <Overlay>
-                  <View>View</View>
+                  <View>
+                    <a className="has-text-white" href={frontmatter.projects.example1.url}
+                      aria-label={frontmatter.projects.example1.title} target="_blank" rel="noopener noreferrer"
+                      >View</a>
+                  </View>
                 </Overlay>
               </Container>
             </div>
             <div className="column is-one-third">
               <Container>
-                <ImageWrapper className="image imghvr-fade">
-                  <Img fluid={frontmatter.projects.example2.image.childImageSharp.fluid}/>
+                <ImageWrapper className="image ">
+                  <Img fluid={frontmatter.projects.example2.image.childImageSharp.fluid} css={round}/>
                 </ImageWrapper>
                 <Overlay>
-                  <View>View</View>
+                  <View>
+                    <a className="has-text-white" href={frontmatter.projects.example2.url}
+                      aria-label={frontmatter.projects.example2.title} target="_blank" rel="noopener noreferrer"
+                      >View</a>
+                  </View>
                 </Overlay>
               </Container>
             </div>
             <div className="column is-one-third">
               <Container>
-                <ImageWrapper className="image imghvr-fade">
-                  <Img fluid={frontmatter.projects.example3.image.childImageSharp.fluid}/>
+                <ImageWrapper className="image ">
+                  <Img fluid={frontmatter.projects.example3.image.childImageSharp.fluid} css={round}/>
                 </ImageWrapper>
                 <Overlay>
-                  <View>View</View>
+                  <View>
+                    <a className="has-text-white" href={frontmatter.projects.example3.url}
+                      aria-label={frontmatter.projects.example3.title} target="_blank" rel="noopener noreferrer"
+                      >View</a>
+                  </View>
+                </Overlay>
+              </Container>
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column is-one-third">
+              <Container>
+                <ImageWrapper className="image ">
+                  <Img fluid={frontmatter.projects.example4.image.childImageSharp.fluid} css={round}/>
+                </ImageWrapper>
+                <Overlay>
+                  <View>
+                    <a className="has-text-white" href={frontmatter.projects.example4.url}
+                      aria-label={frontmatter.projects.example4.title} target="_blank" rel="noopener noreferrer"
+                      >View</a>
+                  </View>
+                </Overlay>
+              </Container>
+            </div>
+            <div className="column is-one-third">
+              <Container>
+                <ImageWrapper className="image ">
+                  <Img fluid={frontmatter.projects.example5.image.childImageSharp.fluid} css={round}/>
+                </ImageWrapper>
+                <Overlay>
+                  <View>
+                    <a className="has-text-white" href={frontmatter.projects.example5.url}
+                      aria-label={frontmatter.projects.example5.title} target="_blank" rel="noopener noreferrer"
+                      >View</a>
+                  </View>
+                </Overlay>
+              </Container>
+            </div>
+            <div className="column is-one-third">
+              <Container>
+                <ImageWrapper className="image ">
+                  <Img fluid={frontmatter.projects.example6.image.childImageSharp.fluid} css={round}/>
+                </ImageWrapper>
+                <Overlay>
+                  <View>
+                    <a className="has-text-white" href={frontmatter.projects.example6.url}
+                      aria-label={frontmatter.projects.example6.title} target="_blank" rel="noopener noreferrer"
+                      >View</a>
+                  </View>
                 </Overlay>
               </Container>
             </div>
@@ -163,7 +222,39 @@ export const projectsQuery = graphql`
               }
             }
           }
-
+          example4 {
+            title
+            url
+            image {
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+          example5 {
+            title
+            url
+            image {
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+          example6 {
+            title
+            url
+            image {
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
         }
       }
     }
