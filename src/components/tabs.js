@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const Tabs = () => (
-    <div className="tabs has-text-weight-light " >
+    <div className="tabs has-text-weight-light is-size-7-mobile" >
       <ul className="has-text-grey">
         <li>
           <Link to="/">
