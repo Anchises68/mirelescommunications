@@ -28,7 +28,6 @@ export default function ContactTemplate({
               <Contact/>
             </div>
           </div>
-
         </div>
       </div>
     </TemplateWrapper>

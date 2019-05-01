@@ -31,9 +31,7 @@ const Layout = ({children}) => (
             ]}
           >
             <html lang="en" />
-            
           </Helmet>
-
           <SEO/>
           <TypographyStyle typography={typography} />
           <div>

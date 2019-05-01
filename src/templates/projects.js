@@ -18,7 +18,7 @@ const ImageWrapper = styled.div`
   -webkit-filter: brightness(100%);
   border-radius: 5px;
   -webkit-filter: brightness(60%);
-  }
+  
 `
 const View = styled.p`
   background-color: rgba(51, 51, 77, 0.8);
@@ -27,7 +27,8 @@ const View = styled.p`
   padding: 4px 16px;
   cursor: pointer;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 5px
+
 `
 const Overlay = styled.div`
   transition: .5s ease;
@@ -41,6 +42,7 @@ const Overlay = styled.div`
    -moz-transition: all .5s;
    -o-transition: all .5s;
    transition: all .5s;
+
   }
 `
 
