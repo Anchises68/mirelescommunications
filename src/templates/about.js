@@ -39,7 +39,7 @@ export default function AboutTemplate({
                  </div>
                  <div className="card-footer">
                    <div className="card-footer-item">
-                     <Social social={data.markdownRemark.frontmatter.alex.email}/>
+                     <Social social={frontmatter}/>
                    </div>
                  </div>
                </div>

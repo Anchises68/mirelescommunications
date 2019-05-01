@@ -9,7 +9,7 @@ const Icon = styled.li`
 `
 
 function Social(props) {
-  console.log(props.social)
+  console.log(props)
 
   return (
     <nav className="content">
