@@ -6,6 +6,7 @@ exports.createPages = ({ actions, graphql }) => {
   const introPageTemplate = path.resolve(`src/templates/intro.js`)
   const projectsPageTemplate = path.resolve('src/templates/projects.js')
   const contactPageTemplate = path.resolve('src/templates/contact.js')
+  const successPageTemplate = path.resolve('src/templates/success.js')
 
   return graphql(`
     {
@@ -42,6 +43,17 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      success: allMarkdownRemark(
+        filter: {fileAbsolutePath: { glob: "**/src/pages/success/*md"}}
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -68,6 +80,14 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: contactPageTemplate,
+        context: {},
+      })
+    })
+
+    result.data.success.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: successPageTemplate,
         context: {},
       })
     })
