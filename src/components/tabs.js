@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const Tabs = () => (
-  <div className="" >
     <div className="tabs has-text-weight-light" >
       <ul className="has-text-grey">
         <li>
@@ -32,7 +31,6 @@ const Tabs = () => (
         </li>
       </ul>
     </div>
-  </div>
 )
 
 export default Tabs

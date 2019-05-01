@@ -32,32 +32,42 @@ const Home = () => (
 
         }}
           >
-          <div className="hero-head">
-            <nav className="navbar" role="navigation" aria-label="main navigation">
-              <div className="container">
-                <div className="navbar-brand">
-                  <span className="navbar-burger burger has-text-light" data-target="navbarMenuHeroA">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </span>
-                </div>
-                <div className="navbar-menu ">
-
-                  <Link className="navbar-item has-text-light" to="/">Home</Link>
-                  <Link className="navbar-item has-text-light" to="/intro">Intro</Link>
-                  <Link className="navbar-item has-text-light" to="/projects">Projects</Link>
-                  <Link className="navbar-item has-text-light" to="/about">About</Link>
-                  <Link className="navbar-item has-text-light" to="/contact">Contact</Link>
-                </div>
-              </div>
-            </nav>
-          </div>
-
           <div className="hero-body has-text-centered" >
             <div className="container">
-              <h1 className="title has-text-light has-text-weight-light is-size-1">Mireles Commmunications</h1>
-              <h3 className="subtitle has-text-light has-text-weight-light">RELEASE FOR FREE UNDER THE CREATIVE COMMONS LICENSE</h3>
+              <h1 className="title has-text-light has-text-weight-light is-1">Mireles Commmunications</h1>
+              <h3 className="subtitle has-text-light has-text-weight-light is-uppercase">We give your business an online voice.</h3>
+                <div className="tabs has-text-weight-light is-centered" >
+                  <div className="container" style={{marginTop:"40px"}}>
+                    <ul>
+                      <li>
+                        <Link to="/" className="has-text-white">
+                          Home
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/intro" className="has-text-white">
+                          Intro
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/projects" className="has-text-white">
+                          Projects
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/about" className="has-text-white">
+                          About
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/contact" className="has-text-white">
+                          Contact
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
             </div>
           </div>
         </section>
