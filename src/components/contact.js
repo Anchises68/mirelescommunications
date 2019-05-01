@@ -43,6 +43,7 @@ class Contact extends React.Component {
         onSubmit={this.handleSubmit}
         >
         <input type="hidden" name="form-name" value="contact" />
+        <input type="file"/>
           <p hidden>
             <label>
               Don’t fill this out:{" "}
