@@ -1,5 +1,5 @@
 import React from 'react'
-import { navigateTo } from "gatsby-link";
+import { navigate } from "gatsby-link";
 
 function encode(data) {
   return Object.keys(data)
@@ -28,7 +28,7 @@ class Contact extends React.Component {
         ...this.state
       })
     })
-      .then(() => navigateTo(form.getAttribute("action")))
+      .then(() => navigate(form.getAttribute("action")))
       .catch(error => alert(error));
   };
 
@@ -64,7 +64,7 @@ class Contact extends React.Component {
         <div className="field">
           <label className="label">Message</label>
           <div className="control">
-            <textarea onChange={this.handleChange} class="textarea" name="message" placeholder="Your message here..."></textarea>
+            <textarea onChange={this.handleChange} className="textarea" name="message" placeholder="Your message here..."></textarea>
           </div>
         </div>
         <div className="field">
