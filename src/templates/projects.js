@@ -21,13 +21,12 @@ const ImageWrapper = styled.div`
   }
 `
 const View = styled.p`
-  background-color: rgba(51, 51, 77, 0.5);
+  background-color: rgba(51, 51, 77, 0.8);
   color: white;
   font-size: 16px;
   padding: 4px 16px;
   cursor: pointer;
   text-transform: uppercase;
-  border: 1px solid #fff;
   border-radius: 5px;
 `
 const Overlay = styled.div`
