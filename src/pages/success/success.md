@@ -1,6 +1,8 @@
 ---
 path: "/success"
-title: "Success"
+title: "Message Sent!"
 ---
 
-Send us a message. We would love to hear from you!
+### Thank you  
+
+We have received your message and will get back to you shortly.

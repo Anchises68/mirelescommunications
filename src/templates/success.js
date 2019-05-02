@@ -13,18 +13,17 @@ export default function SuccessTemplate({
     <TemplateWrapper>
       <div className="jumbotron" style={{marginTop:"30px"}}>
         <div className="container">
-          <h1 className="title is-uppercase has-text-weight-light">{frontmatter.title}</h1>
-            <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
         </div>
       </div>
       <div className="section">
         <div className="container">
           <div className="columns">
             <div className="column is-half is-offset-one-quarter">
-              <h1>Success</h1>
+              <h1 className="title is-uppercase has-text-weight-light">{frontmatter.title}</h1>
+                <div
+                  className="blog-post-content"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
             </div>
           </div>
         </div>
