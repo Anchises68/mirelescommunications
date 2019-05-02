@@ -17,10 +17,6 @@ class Contact extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleRecaptcha = value => {
-    this.setState({ "g-recaptcha-response": value });
-  };
-
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
