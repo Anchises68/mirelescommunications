@@ -79,6 +79,7 @@ class Contact extends React.Component {
             ref="recaptcha"
             sitekey={RECAPTCHA_KEY}
             onChange={this.handleRecaptcha}
+            style={{marginBottom: "5px"}}
           />
           <div className="control">
             <input id="form_botcheck" name="form_botcheck" className="form-control" type="hidden" value=""/>
