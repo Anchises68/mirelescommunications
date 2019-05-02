@@ -68,6 +68,7 @@ module.exports = {
         ]
       }
     },
+    `gatsby-plugin-recaptcha`,
     `gatsby-plugin-offline`
   ]
 }
