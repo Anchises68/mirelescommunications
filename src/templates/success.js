@@ -8,7 +8,6 @@ export default function SuccessTemplate({
 }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-  console.log(data)
   return (
     <TemplateWrapper>
       <div className="jumbotron" style={{marginTop:"30px"}}>

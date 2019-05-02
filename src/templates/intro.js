@@ -1,9 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import Social from "../components/social"
+import styled from '@emotion/styled'
 
 import TemplateWrapper from "../components/wrapper"
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
+
+const Icon = styled.li`
+  margin: 0.5rem
+`
 
 export default function IntroTemplate({
   data,
@@ -43,7 +51,25 @@ export default function IntroTemplate({
                    </div>
                    <div className="card-footer">
                      <div className="card-footer-item">
-                       <Social social={frontmatter}/>
+                       <nav className="content">
+                         <ul>
+                           <Icon className="icon">
+                             <a href={frontmatter.alex.url} aria-label="MirelesCloud" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faExternalLinkAlt} className="fas fa-lg has-text-grey-dark "/></a>
+                           </Icon>
+                           <Icon className="icon">
+                             <a href={frontmatter.alex.email} aria-label="e-mail"><FontAwesomeIcon icon={faEnvelope} className="fas fa-lg has-text-grey-dark"/></a>
+                           </Icon>
+                           <Icon className="icon">
+                             <a href={frontmatter.alex.linkedin} aria-label="linkedin" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} className="fas fa-lg has-text-grey-dark"/></a>
+                           </Icon>
+                           <Icon className="icon">
+                             <a href={frontmatter.alex.github} aria-label="Github" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} className="fas fa-lg has-text-grey-dark"/></a>
+                           </Icon>
+                           <Icon className="icon">
+                             <a href={frontmatter.alex.twitter} aria-label="Twitter" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} className="fas fa-lg has-text-grey-dark"/></a>
+                           </Icon>
+                         </ul>
+                       </nav>
                      </div>
                    </div>
                  </div>
@@ -65,7 +91,19 @@ export default function IntroTemplate({
                    </div>
                    <div className="card-footer">
                      <div className="card-footer-item">
-                       <Social />
+                       <nav className="content">
+                         <ul>
+                           <Icon className="icon">
+                             <a href={frontmatter.molly.url} aria-label="MirelesCloud" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faExternalLinkAlt} className="fas fa-lg has-text-grey-dark "/></a>
+                           </Icon>
+                           <Icon className="icon">
+                             <a href={frontmatter.molly.email} aria-label="e-mail"><FontAwesomeIcon icon={faEnvelope} className="fas fa-lg has-text-grey-dark"/></a>
+                           </Icon>
+                           <Icon className="icon">
+                             <a href={frontmatter.molly.linkedin} aria-label="linkedin" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} className="fas fa-lg has-text-grey-dark"/></a>
+                           </Icon>
+                         </ul>
+                       </nav>
                      </div>
                    </div>
                  </div>

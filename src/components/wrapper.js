@@ -1,8 +1,14 @@
 import React from 'react'
 import { StaticQuery } from 'gatsby'
-
-import Social from './social'
+import styled from '@emotion/styled'
 import Tabs from './tabs'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
+const Icon = styled.li`
+  margin: 0.5rem
+`
 
 const TemplateWrapper = ( {children} ) => (
   <StaticQuery
@@ -44,7 +50,19 @@ const TemplateWrapper = ( {children} ) => (
                 { children }
               </div>
               <div className="content has-text-centered ">
-                <Social/>
+                <nav className="content">
+                  <ul>
+                    <Icon className="icon">
+                      <a href="https://www.mirelescloud.com/" aria-label="MirelesCloud" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faExternalLinkAlt} className="fas fa-lg has-text-grey-dark "/></a>
+                    </Icon>
+                    <Icon className="icon">
+                      <a href="mailto:mirelescommunications@gmail.com" aria-label="e-mail"><FontAwesomeIcon icon={faEnvelope} className="fas fa-lg has-text-grey-dark"/></a>
+                    </Icon>
+                    <Icon className="icon">
+                      <a href="https://github.com/MirelesCloud" aria-label="Github" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} className="fas fa-lg has-text-grey-dark"/></a>
+                    </Icon>
+                  </ul>
+                </nav>
               </div>
             </div>
           </div>
