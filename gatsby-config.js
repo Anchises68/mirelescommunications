@@ -14,6 +14,35 @@ module.exports = {
         start_url: `/`,
         theme_color: `#666699`,
         background_color: `#efeff5`,
+        icon: `src/images/icon.png`,
+        icons: [
+          {
+            src: `/favicons/favicon-16x16.png`,
+            sizes: `16x16`,
+            type: `image/png`,
+          },
+          {
+            src: `/favicons/favicon-32x32.png`,
+            sizes: `32x32`,
+            type: `image/png`,
+          },
+          {
+            src: `/favicons/apple-touch-icon-114x114.png`,
+            sizes: `114x114`,
+            type: `image/png`,
+          },
+          {
+            src: `/favicons/apple-touch-icon-144x144.png`,
+            sizes: `144x144`,
+            type: `image/png`,
+          },
+          {
+            src: `/favicons/apple-touch-icon-152x152.png`,
+            sizes: `152x152`,
+            type: `image/png`,
+          },
+
+        ]
       }
     },
     {

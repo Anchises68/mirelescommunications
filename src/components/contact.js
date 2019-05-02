@@ -81,8 +81,6 @@ class Contact extends React.Component {
           <div className="control">
             <input id="form_botcheck" name="form_botcheck" className="form-control" type="hidden" value=""/>
             <button className="button is-dark" type="submit" data-loading-text="Please wait...">Submit</button>
-
-
           </div>
         </div>
       </form>
