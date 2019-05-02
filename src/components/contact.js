@@ -39,7 +39,7 @@ class Contact extends React.Component {
         method="POST"
         action="/success/"
         data-netfliy="true"
-        data-netlify-recaptcha="true"
+        data-netfliy-honeypot="bot-field"
         onSubmit={this.handleSubmit}
         >
         <input type="hidden" name="form-name" value="contact" />
