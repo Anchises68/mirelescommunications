@@ -1,36 +1,45 @@
 import React from 'react'
 import { navigate } from "gatsby-link";
 
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
-
 class Contact extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.ContactForm = React.createRef()
+    this.state = {}
+  }
+  encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value })
   }
 
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
-
   handleSubmit = e => {
-    e.preventDefault();
-    const form = e.target;
+    e.preventDefault()
+    const form = this.ContactForm.current
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
+      body: this.encode({
         "form-name": form.getAttribute("name"),
-        ...this.state
-      })
+        ...this.state,
+      }),
     })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error));
-  };
+      .then(response => {
+        console.log("====================================")
+        console.log(`${JSON.stringify(response, null, 2)}`)
+        console.log("====================================")
+        navigate(form.getAttribute("action"))
+      })
+      .catch(error => {
+        console.log("====================================")
+        console.log(`error in submiting the form data:${error}`)
+        console.log("====================================")
+      })
+  }
 
   render () {
     return (
@@ -41,6 +50,7 @@ class Contact extends React.Component {
         data-netfliy="true"
         netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}
+        ref={this.ContactForm}
         >
         <input type="hidden" name="form-name" value="contact" />
           <p hidden>
@@ -71,6 +81,7 @@ class Contact extends React.Component {
           <div className="control">
             <input id="form_botcheck" name="form_botcheck" className="form-control" type="hidden" value=""/>
             <button className="button is-dark" type="submit" data-loading-text="Please wait...">Submit</button>
+
 
           </div>
         </div>
