@@ -75,14 +75,15 @@ class Contact extends React.Component {
           </div>
         </div>
         <div className="field">
+          <Recaptcha
+            ref="recaptcha"
+            sitekey={RECAPTCHA_KEY}
+            onChange={this.handleRecaptcha}
+          />
           <div className="control">
             <input id="form_botcheck" name="form_botcheck" className="form-control" type="hidden" value=""/>
             <button className="button is-dark" type="submit" data-loading-text="Please wait...">Submit</button>
-              <Recaptcha
-                ref="recaptcha"
-                sitekey={RECAPTCHA_KEY}
-                onChange={this.handleRecaptcha}
-              />
+
           </div>
         </div>
       </form>
