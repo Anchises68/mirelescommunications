@@ -29,7 +29,7 @@ const TemplateWrapper = ( {children} ) => (
           }}>
           <div className="hero-body">
             <div className="container">
-              <h1 className="title has-text-light has-text-weight-light is-1">Mireles Communications</h1>
+              <h1 className="title has-text-light has-text-weight-light is-1 is-size-2-mobile">Mireles Communications</h1>
             </div>
           </div>
           </div>

@@ -36,7 +36,7 @@ class Contact extends React.Component {
     return (
       <form
         name="contact"
-        method="post"
+        method="POST"
         action="/success/"
         data-netfliy="true"
         data-netfliy-honeypot="bot-field"
@@ -64,7 +64,7 @@ class Contact extends React.Component {
         <div className="field">
           <label className="label">Message</label>
           <div className="control">
-            <textarea onChange={this.handleChange} className="textarea" name="message" placeholder="Your message here..."></textarea>
+            <textarea onChange={this.handleChange} className="textarea" type="text" name="message" placeholder="Your message here..."></textarea>
           </div>
         </div>
         <div className="field">
@@ -73,7 +73,6 @@ class Contact extends React.Component {
             <button className="button is-dark" type="submit" data-loading-text="Please wait...">Submit</button>
           </div>
         </div>
-
       </form>
     )
   }
